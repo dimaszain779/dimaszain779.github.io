@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Speech to Text Multibahasa</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+        <h1 class="title">Speech to Text Multibahasa</h1>
+        <button id="themeToggleButton" class="dark-mode-toggle">
+            <span id="moon-icon">
+                🌙
+            </span>
+            <span id="sun-icon" class="hidden">
+                ☀️
+            </span>
+        </button>
+        <div class="max-w-3xl mx-auto bg-white rounded-xl shadow-md overflow-hidden">
+            <div class="p-8">
+                <div class="flex justify-between items-center mb-8">
+                    <div class="relative"></div>
+                    <div class="font-settings">
+                        <select id="languageSelect">
+                            <option value="id-ID">Bahasa Indonesia</option>
+                            <option value="en-US">English</option>
+                            <option value="jv-ID">Basa Jawa</option>
+                        </select>
+                    </div>
+                 <div class="font-settings">
+                    <select id="fontSizeSelect">
+                        <option value="14">Ukuran Font: 14px</option>
+                        <option value="16" selected>Ukuran Font: 16px</option>
+                        <option value="18">Ukuran Font: 18px</option>
+                        <option value="20">Ukuran Font: 20px</option>
+                    </select>
+                 </div>
+                    <div class="font-settings">
+                    <select id="fontFamilySelect">
+                        <option value="Arial, sans-serif" selected>Arial</option>
+                        <option value="Verdana, sans-serif">Verdana</option>
+                        <option value="Times New Roman, serif">Times New Roman</option>
+                        <option value="Courier New, monospace">Courier New</option>
+                    </select>
+                    </div>
+                    </div>
+                <div class="mb-6">
+                    <div id="waveform" class="waveform mb-4 flex items-center justify-center">
+                        <div class="bar"></div>
+                        <div class="bar"></div>
+                        <div class="bar"></div>
+                        <div class="bar"></div>
+                        <div class="bar"></div>
+                        <div class="bar"></div>
+                        <div class="bar"></div>
+                        <div class="bar"></div>
+                        <div class="bar"></div>
+                        <div class="bar"></div>
+                    </div>
+                    
+                    <button id="recordBtn" class="w-full py-3 px-6 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-lg transition duration-200 flex items-center justify-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z" />
+                        </svg>
+                        <span id="btnText">Mulai Merekam</span>
+                    </button>
+                </div>
+
+                <div class="bg-gray-100 rounded-lg p-4 mb-6">
+                    <p class="text-sm text-gray-600 mb-2">Status:</p>
+                    <p id="status" class="font-medium text-gray-700">Tekan tombol di atas untuk mulai merekam</p>
+                </div>
+
+                <div class="mb-6">
+                    <div class="flex justify-between items-center mb-2">
+                        <div>
+                            <button id="copyBtn" class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-lg transition duration-300 shadow-md">Salin Teks</button>
+                            <button id="downloadBtn" class="bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded-lg transition duration-300 shadow-md">Unduh</button>
+                            <button id="clearBtn" class="bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded-lg transition duration-300 shadow-md">Hapus</button>
+                        </div>
+                    </div>
+                    <textarea id="result" rows="8" class="result-textarea" placeholder="Hasil transkripsi akan muncul di sini..." readonly></textarea>
+                </div>
+
+                <div class="bg-blue-50 p-4 rounded-lg">
+                    <h2 class="text-lg font-semibold text-blue-800 mb-2">Panduan Penggunaan:</h2>
+                    <ol class="list-decimal list-inside space-y-1 text-sm text-blue-700">
+                        <li>Pilih bahasa yang ingin digunakan</li>
+                        <li>Tekan tombol "Mulai Merekam"</li>
+                        <li>Berbicara dengan jelas dan pelan-pelan</li>
+                        <li>Tekan tombol lagi untuk menghentikan rekaman</li>
+                        <li>Hasil transkripsi akan muncul di kotak teks</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
+    

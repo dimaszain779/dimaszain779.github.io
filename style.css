@@ -1,0 +1,92 @@
+        .title{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 3.5rem;
+            margin-top: 3rem;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #006aff;
+        }
+        
+        .pulse {
+            animation: pulse 1.5s infinite;
+        }
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
+        .waveform {
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .bar {
+            width: 6px;
+            height: 10px;
+            margin: 0 1px;
+            background: linear-gradient(to top, #3b82f6, #93c5fd);
+            border-radius: 3px;
+            animation: wave 1s infinite;
+        }
+
+        @keyframes wave {
+            0%, 100% { transform: scaleY(1); }
+            50% { transform: scaleY(1.5); }
+        }
+
+                .result-textarea {
+            width: 100%;
+            padding: 0.5rem 1rem;
+            border-radius: 0.375rem;
+            font-size: 0.875rem;
+            font-weight: 500;
+            color: #000000;
+            background-color: #ffffff;
+            resize: none;
+        }
+
+        .dark-mode-toggle {
+            position: absolute;
+            top: 1rem;
+            right: 16rem;
+            background-color: #ffffff;
+            color: #111827;
+            padding: 0.5rem 1rem;
+            border-radius: 0.375rem;
+            cursor: pointer;
+            transition: background-color 0.3s, color 0.3s;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+            margin-top: 2rem;
+            display: flex;
+        }
+        .dark-mode {
+            background-color: #1f2937;
+            color: #f9fafb;
+        }
+
+        .dark-mode .bg-white {
+            background-color: #374151;
+            border-color: #4b5563;
+        }
+
+         /* Gaya baru untuk elemen pengaturan font */
+        .font-settings {
+            align-items: center;
+        }
+
+        .font-settings select {
+            appearance: none;
+            background-color: #f3f4f6;
+            border: 1px solid #365787;
+            color: #111827;
+            border-radius: 0.375rem;
+            padding: 0.5rem 1rem;
+            font-size: 0.875rem;
+            font-weight: 500;
+            display: inline-flex;
+        }
+
+
