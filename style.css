@@ -51,10 +51,9 @@
         .dark-mode-toggle {
             position: absolute;
             top: 1rem;
-            right: 16rem;
-            background-color: #ffffff;
+            background-color: #f8f0f0;
             color: #111827;
-            padding: 0.5rem 1rem;
+            padding: 0.5rem 0.5rem;
             border-radius: 0.375rem;
             cursor: pointer;
             transition: background-color 0.3s, color 0.3s;
